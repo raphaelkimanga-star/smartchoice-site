@@ -1,142 +1,257 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About | SmartChoice Multi Services LLC</title>
-  <meta name="description" content="SmartChoice Multi Services LLC is a service-disabled veteran-owned small business in Alexandria, Virginia led by Raphael Kimanga.">
-  <meta name="keywords" content="SDVOSB, VOSB, government contractor, 541611, cyber threat intelligence, aviation maintenance, Alexandria VA, set-aside, sole-source">
-  <meta property="og:title" content="SmartChoice Multi Services LLC — SDVOSB">
-  <meta property="og:description" content="Consulting, cyber, aviation, logistics and supply services for federal, state and commercial clients.">
-  <meta property="og:type" content="website">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "SmartChoice Multi Services LLC",
-    "description": "Service-Disabled Veteran-Owned Small Business (SDVOSB)",
-    "email": "rkimanga@smartchoice24.org",
-    "telephone": "+1-785-317-0739",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "5604 Bismach Dr, Apt 204",
-      "addressLocality": "Alexandria",
-      "addressRegion": "VA",
-      "postalCode": "22312",
-      "addressCountry": "US"
-    },
-    "founder": { "@type": "Person", "name": "Raphael Kimanga" }
-  }
-  </script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>About | SmartChoice</title>
+<meta name="description" content="SmartChoice Multi Services LLC is an SBA-certified SDVOSB in Alexandria, Virginia, providing rotary-wing aviation maintenance, ground support equipment services, and cyber threat intelligence.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: aircraft data-plate motif. Navy hangar band hero, then a two-column body where
+   contracting data sits on a riveted "spec plate" beside the narrative. */
+:root{
+  --navy:#112E51; --navy-2:#0B2140; --red:#B51D1D; --gold:#C6A02A;
+  --bg:#F6F7F9; --surface:#FFFFFF; --ink:#16202E; --muted:#56637A; --line:#D8DEE7;
+  --plate:#EEF1F5; --on-navy:#FFFFFF; --on-navy-muted:#B9C6D8;
+  --code:#9A1818;
+  --f-display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --f-body:"Source Sans 3","Segoe UI",Arial,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --logo-light:block; --logo-dark:none;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0C1522; --surface:#122033; --ink:#E8EDF4; --muted:#9FB0C6; --line:#24364E;
+  --plate:#18293F; --navy:#0E2643; --navy-2:#081A30; --code:#F08A7E; --gold:#D4B24A;
+  --logo-light:none; --logo-dark:block; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0C1522; --surface:#122033; --ink:#E8EDF4; --muted:#9FB0C6; --line:#24364E;
+  --plate:#18293F; --navy:#0E2643; --navy-2:#081A30; --code:#F08A7E; --gold:#D4B24A;
+  --logo-light:none; --logo-dark:block; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--f-body);margin:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--surface)}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:1.05}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.eyebrow{font:600 .8rem/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+.code{font-family:var(--f-mono);color:var(--code);font-size:.92em}
+
+/* Header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--surface);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px}
+.brand img{height:46px;width:auto;display:var(--logo-light)}
+.brand img.dark{display:var(--logo-dark)}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font:600 1rem/1 var(--f-display);letter-spacing:.06em;text-transform:uppercase}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;font:600 1rem/1 var(--f-display);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:13px 20px;border-radius:2px;border:2px solid transparent}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:#951616}
+.btn-ghost{border-color:var(--on-navy-muted);color:var(--on-navy)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+@media (max-width:860px){nav{display:none}}
+
+/* Hero */
+.hero{background:var(--navy);color:var(--on-navy);border-bottom:5px solid var(--gold);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,transparent 0 22px,rgba(255,255,255,.025) 22px 44px);pointer-events:none}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.35fr 1fr;gap:48px;align-items:center;padding-block:72px 64px}
+.hero .eyebrow{color:var(--gold)}
+.hero h1{font-size:clamp(2.6rem,6vw,4.4rem);font-weight:700;text-transform:uppercase;letter-spacing:.01em;margin:16px 0 18px}
+.hero h1 span{color:var(--gold)}
+.hero p.lede{font-size:1.15rem;color:var(--on-navy-muted);max-width:56ch;margin:0 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.cert{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.04);padding:24px;min-width:0}
+.cert h2{font-size:1.05rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:14px}
+.cert dl{display:grid;grid-template-columns:auto 1fr;gap:9px 18px;margin:0;font-size:.98rem}
+.cert dt{font:500 .78rem/1.9 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--on-navy-muted)}
+.cert dd{margin:0;font-family:var(--f-mono);font-variant-numeric:tabular-nums;min-width:0;overflow-wrap:anywhere}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr;padding-block:48px}}
+
+/* Sections */
+section.block{padding-block:72px}
+section.block + section.block{border-top:1px solid var(--line)}
+.head{display:grid;gap:10px;margin-bottom:36px;max-width:62ch}
+.head h2{font-size:clamp(2rem,4vw,2.8rem);font-weight:700;text-transform:uppercase}
+.head p{margin:0;color:var(--muted)}
+
+.caps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px;background:var(--line);border:1px solid var(--line)}
+.cap{background:var(--surface);padding:28px 28px 30px;display:grid;gap:10px;align-content:start}
+.cap h3{font-size:1.55rem;font-weight:600;text-transform:uppercase;letter-spacing:.02em}
+.cap p{margin:0;color:var(--muted)}
+.cap .tag{font:500 .75rem/1 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--red)}
+.cap.secondary{background:var(--plate)}
+.cap.wide{grid-column:1/-1}
+@media (max-width:720px){.caps{grid-template-columns:1fr}}
+
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px 40px}
+.why div{border-top:3px solid var(--gold);padding-top:16px}
+.why h3{font-size:1.35rem;text-transform:uppercase;font-weight:600;margin-bottom:6px}
+.why p{margin:0;color:var(--muted);font-size:.98rem}
+
+/* Experience timeline */
+.split{display:grid;grid-template-columns:1.4fr 1fr;gap:56px;align-items:start}
+@media (max-width:900px){.split{grid-template-columns:1fr}}
+.log{list-style:none;margin:0;padding:0;display:grid;gap:0;border-left:2px solid var(--line)}
+.log li{position:relative;padding:0 0 26px 24px;min-width:0}
+.log li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;background:var(--surface);border:2px solid var(--navy)}
+:root[data-theme="dark"] .log li::before{border-color:var(--gold)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .log li::before{border-color:var(--gold)}}
+.log .when{font:500 .8rem/1 var(--f-mono);letter-spacing:.06em;color:var(--muted);font-variant-numeric:tabular-nums}
+.log h3{font-size:1.3rem;font-weight:600;text-transform:uppercase;margin:6px 0 2px}
+.log .where{font-style:italic;color:var(--muted);margin:0 0 6px}
+.log p{margin:0;font-size:.98rem}
+.note{font-size:.88rem;color:var(--muted);margin-top:6px}
+
+/* Data plate */
+.plate{background:var(--plate);border:1px solid var(--line);padding:26px;position:relative;min-width:0}
+.plate::before,.plate::after{content:"";position:absolute;width:8px;height:8px;border-radius:50%;background:var(--line);top:10px}
+.plate::before{left:10px}.plate::after{right:10px}
+.plate h3{font-size:1.2rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--muted);margin-bottom:16px}
+.rows{display:grid;gap:0}
+.row{display:grid;grid-template-columns:150px 1fr;gap:12px;padding:10px 0;border-top:1px dashed var(--line);min-width:0}
+.row:first-child{border-top:0}
+.row b{font:500 .78rem/1.7 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.row span{min-width:0;overflow-wrap:anywhere}
+@media (max-width:480px){.row{grid-template-columns:1fr;gap:2px}}
+
+.quals{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.quals span{font:500 .82rem/1 var(--f-mono);padding:8px 10px;border:1px solid var(--line);background:var(--surface)}
+
+/* Contact */
+.contact{background:var(--navy-2);color:var(--on-navy)}
+.contact .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;padding-block:64px;align-items:center}
+.contact h2{font-size:clamp(2rem,4vw,2.8rem);text-transform:uppercase;font-weight:700;margin:10px 0 12px}
+.contact .eyebrow{color:var(--gold)}
+.contact p{color:var(--on-navy-muted);margin:0 0 22px;max-width:52ch}
+.poc{border-left:4px solid var(--gold);padding-left:22px;display:grid;gap:12px}
+.poc .name{font:700 1.6rem/1 var(--f-display);text-transform:uppercase;letter-spacing:.02em}
+.poc .role{color:var(--on-navy-muted);margin-top:-6px}
+.line{display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-family:var(--f-mono);font-size:.98rem;min-width:0}
+.line a{color:var(--on-navy);overflow-wrap:anywhere}
+.copy{font:600 .72rem/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;background:transparent;color:var(--on-navy-muted);border:1px solid rgba(255,255,255,.25);padding:6px 8px;cursor:pointer}
+.copy:hover{color:var(--gold);border-color:var(--gold)}
+@media (max-width:860px){.contact .wrap{grid-template-columns:1fr}}
+
+footer{background:var(--navy-2);color:var(--on-navy-muted);border-top:1px solid rgba(255,255,255,.1);font-size:.88rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;padding-block:20px}
+
+nav ul{gap:20px;white-space:nowrap}
+.hero h1{font-size:clamp(2.4rem,4.6vw,3.5rem)}
+.why{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:900px){.why{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.why{grid-template-columns:1fr}}
+@media (max-width:1040px){nav{display:none}.mobile-nav{display:block}}
+img{max-width:100%;height:auto}
+[hidden]{display:none!important}
+nav a[aria-current="page"]{color:var(--ink);box-shadow:inset 0 -3px 0 var(--red);padding-bottom:6px}
+.pagehead{background:var(--navy);color:var(--on-navy);border-bottom:5px solid var(--gold);position:relative;overflow:hidden}
+.pagehead::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,transparent 0 22px,rgba(255,255,255,.025) 22px 44px);pointer-events:none}
+.pagehead .wrap{position:relative;z-index:1;padding-block:52px 44px;display:grid;gap:12px}
+.pagehead .eyebrow{color:var(--gold)}
+.pagehead h1{font-size:clamp(2.4rem,5vw,3.6rem);font-weight:700;text-transform:uppercase}
+.pagehead p{margin:0;color:var(--on-navy-muted);max-width:62ch;font-size:1.1rem}
+.more{display:inline-block;margin-top:28px;font:600 1rem/1 var(--f-display);letter-spacing:.08em;text-transform:uppercase;color:var(--red);text-decoration:none;border-bottom:2px solid currentColor;padding-bottom:4px}
+.more:hover{color:var(--ink)}
+.prose{max-width:66ch;display:grid;gap:16px}
+.prose p{margin:0}
+.prose h2{font-size:1.7rem;text-transform:uppercase;font-weight:700;margin-top:12px}
+.about-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:56px;align-items:start}
+@media (max-width:900px){.about-grid{grid-template-columns:1fr}}
+.facts{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.facts li{display:flex;gap:10px;align-items:baseline}
+.facts li::before{content:"";flex:none;width:8px;height:8px;background:var(--gold);transform:translateY(-2px)}
+.mobile-nav{display:none;border-top:1px solid var(--line);overflow-x:auto}
+.mobile-nav ul{display:flex;gap:18px;list-style:none;margin:0;padding-block:10px;font:600 .95rem/1 var(--f-display);letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+.mobile-nav a{text-decoration:none;color:var(--muted)}
+.mobile-nav a[aria-current="page"]{color:var(--red)}
+@media (max-width:860px){.mobile-nav{display:block}}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px 32px;margin-top:8px}
+.steps div{border-top:3px solid var(--gold);padding-top:14px}
+.steps h3{font-size:1.25rem;text-transform:uppercase;font-weight:600;margin-bottom:4px}
+.steps p{margin:0;color:var(--muted);font-size:.98rem}
+</style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to main content</a>
-
-  <!-- Identifier strip -->
-  <div class="id-strip">
-    <div class="container id-strip__inner">
-      <span><strong>SBA-Certified SDVOSB &amp; VOSB</strong></span>
-      <span class="id-strip__codes">UEI <b>SFMFL4AM3EB7</b> <span aria-hidden="true">·</span> CAGE <b>0SQJ7</b> <span aria-hidden="true">·</span> Primary NAICS <b>541611</b></span>
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="index.html" aria-label="SmartChoice Multi Services LLC home">
+      <img src="assets/logo.png" alt="SmartChoice Multi Services LLC" width="213" height="46">
+      <img class="dark" src="assets/logo-dark.png" alt="SmartChoice Multi Services LLC" width="213" height="46">
+    </a>
+    <nav aria-label="Main"><ul><li><a href="capabilities.html">Capabilities</a></li><li><a href="past-performance.html">Past Performance</a></li><li><a href="contracting.html">Contracting Data</a></li><li><a href="about.html" aria-current="page">About</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+    <a class="btn btn-red" href="contact.html">Teaming</a>
+  </div>
+  <div class="mobile-nav"><div class="wrap"><ul><li><a href="capabilities.html">Capabilities</a></li><li><a href="past-performance.html">Past Performance</a></li><li><a href="contracting.html">Contracting Data</a></li><li><a href="about.html" aria-current="page">About</a></li><li><a href="contact.html">Contact</a></li></ul></div></div>
+</header>
+<main>
+<section class="pagehead"><div class="wrap">
+  <div class="eyebrow">About SmartChoice</div>
+  <h1>Veteran-led. Hangar-tested.</h1>
+  <p>A service-disabled veteran-owned small business in Alexandria, Virginia.</p>
+</div></section>
+<section class="block">
+  <div class="wrap about-grid">
+    <div class="prose">
+      <p>SmartChoice Multi Services LLC is an SBA-certified Service-Disabled Veteran-Owned Small Business (SDVOSB) providing aviation maintenance, ground support equipment, and cyber threat intelligence services to federal, defense, and commercial customers.</p>
+      <h2>Our Founder</h2>
+      <p>Raphael Kimanga brings 18+ years of aviation maintenance and leadership. He began as an aircraft technician and safety officer with Kenya Airways and the Kenya Air Force, supported fixed- and rotary-wing operations at Kandahar Airfield, Afghanistan, and served as an aircraft powertrain repairer and shop supervisor in U.S. military aviation maintenance.</p>
+      <p>He has since applied the same discipline to cyber threat intelligence, supporting Defense Intelligence Agency and National Geospatial-Intelligence Agency missions. That combination of hands-on aircraft experience and intelligence analysis is rare in a small business.</p>
+      <h2>How We Operate</h2>
+      <p>Customers work directly with the founder. We take on work we know how to do, document it carefully, and treat safety and quality control as part of the job, not an afterthought.</p>
+    </div>
+    <div class="plate">
+      <h3>At a Glance</h3>
+      <ul class="facts">
+        <li>SBA-certified SDVOSB and VOSB</li>
+        <li>Headquartered in Alexandria, Virginia</li>
+        <li>Aviation maintenance core, cyber secondary</li>
+        <li>Open to prime, subcontract, and teaming work</li>
+        <li>B.S., Upper Iowa University</li>
+        <li>CompTIA Security+ and CySA+</li>
+      </ul>
     </div>
   </div>
-
-  <header class="site-header">
-    <div class="container header__inner">
-      <a class="brand" href="./" aria-label="SmartChoice Multi Services LLC home">
-        <img src="assets/favicon.svg" alt="" width="44" height="44">
-        <span class="brand__text">
-          <span class="brand__name">Smart<span>Choice</span></span>
-          <span class="brand__sub">Multi Services LLC</span>
-        </span>
-      </a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
-        <span class="nav-toggle__bar"></span><span class="sr-only">Menu</span>
-      </button>
-      <nav id="primary-nav" class="nav" aria-label="Primary">
-        <ul>
-          <li><a href="./">Home</a></li>
-          <li><a href="capabilities.html">Capabilities</a></li>
-          <li><a href="past-performance.html">Past Performance</a></li>
-          <li><a href="contracting.html">Contracting Data</a></li>
-          <li><a href="about.html" aria-current="page">About</a></li>
-          <li><a class="nav__cta" href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+</section>
+<section class="contact">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Sources Sought &middot; RFIs &middot; Teaming</div>
+      <h2>Have a requirement? Let's talk.</h2>
+      <p>We respond to sources-sought notices and RFIs, and we are open to subcontracting and teaming partnerships as well as SDVOSB set-aside and sole-source opportunities.</p>
+      <div class="cta"><a class="btn btn-red" href="contact.html">Contact Us</a>
+      <a class="btn btn-ghost" href="assets/SmartChoice_Capability_Statement.pdf" target="_blank" rel="noopener">Capability Statement (PDF)</a></div>
     </div>
-  </header>
-
-    <section class="page-banner">
-      <div class="container">
-        <nav class="crumbs" aria-label="Breadcrumb"><a href="./">Home</a> <span aria-hidden="true">/</span> <span aria-current="page">About Us</span></nav>
-        <p class="eyebrow eyebrow--light">Company Background</p>
-        <h1>About Us</h1>
-        <p class="page-banner__sub">Veteran-owned and veteran-led in Alexandria, Virginia.</p>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section class="section" id="about" aria-labelledby="about-title">
-      <div class="container about">
-        <div>
-          <p class="eyebrow">Company Background</p>
-          <h2 id="about-title">Veteran-led. Technically grounded.</h2>
-          <p>SmartChoice Multi Services LLC is a service-disabled veteran-owned small business in Alexandria, Virginia, founded and led by Raphael Kimanga. We pair more than 20 years of aviation maintenance and leadership experience with current cyber threat intelligence expertise to deliver dependable consulting, technical, logistics, and supply services to government and commercial customers.</p>
-        </div>
-        <div class="leader">
-          <div class="leader__mono" aria-hidden="true">RK</div>
-          <h3>Raphael Kimanga</h3>
-          <p class="leader__role">Owner / Director</p>
-          <ul>
-            <li>B.S., Upper Iowa University</li>
-            <li>CompTIA Security+ · CySA+</li>
-            <li>DCITA Digital Forensics (CIRC)</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Differentiators -->
-    <section class="section section--navy" id="differentiators" aria-labelledby="diff-title">
-      <div class="container">
-        <header class="section__head">
-          <p class="eyebrow eyebrow--light">Differentiators</p>
-          <h2 id="diff-title">Why contracting officers choose SmartChoice</h2>
-        </header>
-        <ol class="diffs">
-          <li>
-            <h3>Certified SDVOSB / VOSB</h3>
-            <p>SBA-certified and eligible for set-aside and sole-source veteran contracting.</p>
-          </li>
-          <li>
-            <h3>Mission-Ready Leadership</h3>
-            <p>Over 20 years of aviation maintenance, supervision, and quality-control experience, including deployed support at Kandahar Airfield, Afghanistan.</p>
-          </li>
-          <li>
-            <h3>Technical + Intelligence Depth</h3>
-            <p>Combines hands-on engineering and maintenance expertise with Intelligence Community cyber analysis.</p>
-          </li>
-          <li>
-            <h3>Multi-Service Agility</h3>
-            <p>One responsive, DMV-based small business covering consulting, IT, logistics, and supply needs.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-
-  <footer class="site-footer">
-    <div class="container footer__inner">
-      <p><strong>SmartChoice Multi Services LLC</strong> · Service-Disabled Veteran-Owned Small Business</p>
-      <p>UEI SFMFL4AM3EB7 · CAGE 0SQJ7 · SBA Certifications: SDVOSB, VOSB</p>
-      <p class="footer__small">&copy; <span id="year">2026</span> SmartChoice Multi Services LLC. All rights reserved.</p>
+    <div class="poc">
+      <div class="name">Raphael Kimanga</div>
+      <div class="role">Owner / Director &middot; Contracting POC</div>
+      <div class="line"><a href="mailto:rkimanga@smartchoice24.org">rkimanga@smartchoice24.org</a><button class="copy" type="button" data-copy="rkimanga@smartchoice24.org">Copy</button></div>
+      <div class="line"><a href="tel:+17853170739">785-317-0739</a><button class="copy" type="button" data-copy="785-317-0739">Copy</button></div>
     </div>
-  </footer>
-
-  <script src="assets/main.js" defer></script>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <span>SmartChoice Multi Services LLC &middot; Service-Disabled Veteran-Owned Small Business</span>
+    <span>UEI SFMFL4AM3EB7 &middot; CAGE 0SQJ7 &middot; SBA SDVOSB, VOSB</span>
+    <span>&copy; 2026 SmartChoice Multi Services LLC. All rights reserved.</span>
+  </div>
+</footer>
+<script>
+document.querySelectorAll('.copy').forEach(function(b){
+  b.addEventListener('click',function(){
+    var v=b.getAttribute('data-copy'),done=function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1500)};
+    try{navigator.clipboard.writeText(v).then(done,function(){sel(b)})}catch(e){sel(b)}
+  });
+});
+function sel(b){var a=b.previousElementSibling,r=document.createRange();r.selectNodeContents(a);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected'}
+</script>
 </body>
 </html>
